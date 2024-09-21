@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .header input[type="date"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .header input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .module {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+        }
+
+        .module img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .module h3 {
+            margin-top: 10px;
+        }
+
+        .module p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .href {
+           color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Certificate Verification System</h1>
+        <form action="verify.php" method="POST">
+            <label for="certificate_number">Enter Certificate Details:</label>
+            <input type="text" name="certificate_number" id="certificate_number" placeholder="Enter your certificate number." required>
+            <input type="text" name="name" id="name" placeholder="Enter your complete name." required>
+            <input type="text" name="date_of_birth" id="date_of_birth" placeholder="Enter your date of birth yyyy-mm-dd." required>
+            <input type="submit" value="Verify">
+        </form>
+    </div>
+
+    <div class="content container">
+        <div class="module">
+            <img src="./img/student.png" alt="Student Module">
+            <h3>Student Module</h3>
+            <p>Students can verify the authenticity of their certificates by entering the certificate code.</p>
+        </div>
+        <div class="module">
+            <img src="./img/certificate.jpg" alt="Certificate Module">
+            <h3>Certificate Module</h3>
+            <p>This module displays certificate details after verification.</p>
+        </div>
+        <div class="module">
+            <img src="./img/admin.png" alt="Admin Module">
+            <h3><a href="login.php" style="text-decoration: none; color:#333;">Admin Module</a></h3>
+            <p>Admins can manage the entire system, adding or modifying certificates.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
